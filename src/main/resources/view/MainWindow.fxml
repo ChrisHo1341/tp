@@ -37,6 +37,9 @@
        <Menu mnemonicParsing="false" text="Help">
          <MenuItem fx:id="helpMenuItem" mnemonicParsing="false" onAction="#handleHelp" text="Help" />
        </Menu>
+       <Menu mnemonicParsing="false" text="Email">
+         <MenuItem mnemonicParsing="false" onAction="#handleExit" text="Create Email" />
+       </Menu>
      </MenuBar>
         <HBox VBox.vgrow="ALWAYS">
             <VBox>

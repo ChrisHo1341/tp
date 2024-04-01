@@ -19,6 +19,15 @@ public class CommandResult {
     /** The application should exit. */
     private final boolean exit;
 
+    private final boolean showEmail;
+
+    public CommandResult(String feedbackToUser, boolean showHelp, boolean exit, boolean showEmail) {
+        this.feedbackToUser = requireNonNull(feedbackToUser);
+        this.showHelp = showHelp;
+        this.exit = exit;
+        this.showEmail = showEmail;        
+    }
+
     /**
      * Constructs a {@code CommandResult} with the specified fields.
      */
@@ -26,6 +35,7 @@ public class CommandResult {
         this.feedbackToUser = requireNonNull(feedbackToUser);
         this.showHelp = showHelp;
         this.exit = exit;
+        this.showEmail = false;
     }
 
     /**
@@ -46,6 +56,10 @@ public class CommandResult {
 
     public boolean isExit() {
         return exit;
+    }
+
+    public boolean isShowEmail() {
+        return showEmail;
     }
 
     @Override
